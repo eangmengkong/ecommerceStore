@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .red-overlay {
+    @apply absolute left-0 top-0 h-full w-full bg-red-600 opacity-80;
+    clip-path: polygon(0 0, 100% 0, 20% 100%, 0% 100%);
+  }
+}
