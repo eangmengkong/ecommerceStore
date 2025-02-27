@@ -14,6 +14,7 @@ import { CheckCircle, ShoppingCart } from 'lucide-react';
 import { useAtom } from 'jotai';
 import { cartActionsAtom } from '../atom/cartAtom';
 import { wishlistActionsAtom } from '../atom/wishlistAtom';
+import { Link } from 'react-router-dom';
 
 const ProductDetails = () => {
   // addtocart
@@ -182,11 +183,13 @@ const ProductDetails = () => {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           {relatedProducts.map((related) => (
             <div key={related.id} className="rounded-lg border p-4 shadow-md">
-              <img
-                src={related.img}
-                alt={related.name}
-                className="h-[20rem] w-[18.75rem] rounded"
-              />
+              <Link to={`/productdetail/${related.id}`}>
+                <img
+                  src={related.img}
+                  alt={related.name}
+                  className="h-[20rem] w-[18.75rem] rounded"
+                />
+              </Link>
               <h4 className="mt-2 text-lg font-medium">{related.name}</h4>
               <p className="font-semibold text-blue-600">{related.price}$</p>
             </div>

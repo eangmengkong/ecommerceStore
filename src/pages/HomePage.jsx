@@ -19,6 +19,7 @@ import {
   CartItemTopSell,
   TopSelling,
 } from '../components/product/Product-Item';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
@@ -48,34 +49,40 @@ const HomePage = () => {
           <div className="flex flex-col gap-6 lg:grid lg:grid-cols-3">
             <div className="relative overflow-hidden border bg-gray-300">
               <div className="red-overlay"></div>
-              <div className="absolute left-5 top-5 z-10 text-white">
-                <h1 className="text-xl font-bold">
-                  Laptop <br /> Collection
-                </h1>
-                <span className="text-sm">Shop Now →</span>
-              </div>
+              <Link to={`/laptops`}>
+                <div className="absolute left-5 top-5 z-10 text-white">
+                  <h1 className="text-xl font-bold">
+                    Laptop <br /> Collection
+                  </h1>
+                  <span className="text-sm">Shop Now →</span>
+                </div>
+              </Link>
               <img src={Shop1} className="h-[300px] w-[400px]" />
             </div>
 
             <div className="relative overflow-hidden border bg-gray-300">
               <div className="red-overlay"></div>
-              <div className="absolute left-5 top-5 z-10 text-white">
-                <h1 className="text-xl font-bold">
-                  Cameras <br />
-                  Collection
-                </h1>
-                <span className="text-sm">Shop Now →</span>
-              </div>
+              <Link to={`/cameras`}>
+                <div className="absolute left-5 top-5 z-10 text-white">
+                  <h1 className="text-xl font-bold">
+                    Cameras <br />
+                    Collection
+                  </h1>
+                  <span className="text-sm">Shop Now →</span>
+                </div>
+              </Link>
               <img src={Shop2} className="h-[300px] w-[400px]" />
             </div>
             <div className="relative overflow-hidden border bg-gray-300">
               <div className="red-overlay"></div>
-              <div className="absolute left-5 top-5 z-10 text-white">
-                <h1 className="text-xl font-bold">
-                  Accessories <br /> Collection
-                </h1>
-                <span className="text-sm">Shop Now →</span>
-              </div>
+              <Link to={`/accessories`}>
+                <div className="absolute left-5 top-5 z-10 text-white">
+                  <h1 className="text-xl font-bold">
+                    Accessories <br /> Collection
+                  </h1>
+                  <span className="text-sm">Shop Now →</span>
+                </div>
+              </Link>
               <img src={Shop3} className="h-[300px] w-[400px]" />
             </div>
           </div>
